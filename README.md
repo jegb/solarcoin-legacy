@@ -1,4 +1,4 @@
-SolarCoin integration/staging tree
+SolarCoin Rock64 node
 ================================
 ![solarcoin](http://i.imgur.com/BS9hSS8.png)
 
