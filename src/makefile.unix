@@ -143,9 +143,10 @@ OBJS= \
 
 all: solarcoind
 
-LIBS += $(CURDIR)/leveldb/libleveldb.a $(CURDIR)/leveldb/libmemenv.a
-DEFS += $(addprefix -I,$(CURDIR)/leveldb/include)
-DEFS += $(addprefix -I,$(CURDIR)/leveldb/helpers)
+LIB_LEVELDB_DIR=/usr/local/lib
+LIBS += $(LIB_LEVELDB_DIR)/libleveldb.a $(LIB_LEVELDB_DIR)/libmemenv.a
+DEFS += $(addprefix -I,$(LIB_LEVELDB_DIR)/include)
+DEFS += $(addprefix -I,$(LIB_LEVELDB_DIR)/helpers)
 OBJS += obj/txdb-leveldb.o
 leveldb/libleveldb.a:
 	@echo "Building LevelDB ..."; cd leveldb; make libleveldb.a libmemenv.a; cd ..;
